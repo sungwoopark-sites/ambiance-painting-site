@@ -19,10 +19,13 @@
   <!-- Preconnect for Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <!-- Non-render-blocking font load -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet"></noscript>
 
-  <!-- Preload hero image -->
-  <link rel="preload" as="image" href="assets/images/family-photo.jpg">
+  <!-- Preload hero image (WebP) -->
+  <link rel="preload" as="image" href="assets/images/family-photo.webp" type="image/webp">
 
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animations.css">
@@ -59,7 +62,10 @@
   <header class="site-header" id="site-header">
     <div class="container header-inner">
       <a href="#" class="logo-link" aria-label="Ambiance Painting Inc. Home">
-        <img src="assets/images/logo.png" alt="Ambiance Painting Inc. Logo" width="180" height="60" class="logo-img">
+        <picture>
+          <source srcset="assets/images/logo.webp" type="image/webp">
+          <img src="assets/images/logo-compressed.png" alt="Ambiance Painting Inc. Logo" width="180" height="60" class="logo-img">
+        </picture>
       </a>
       <nav class="nav-desktop" aria-label="Main navigation">
         <a href="#services">Services</a>
@@ -83,14 +89,17 @@
     <!-- Hero -->
     <section class="hero" id="hero">
       <div class="hero-overlay"></div>
-      <img
-        src="assets/images/family-photo.jpg"
-        alt="Ambiance Painting Inc. team"
-        class="hero-bg"
-        width="1024"
-        height="683"
-        fetchpriority="high"
-      >
+      <picture>
+        <source srcset="assets/images/family-photo.webp" type="image/webp">
+        <img
+          src="assets/images/family-photo.jpg"
+          alt="Ambiance Painting Inc. team"
+          class="hero-bg"
+          width="1024"
+          height="683"
+          fetchpriority="high"
+        >
+      </picture>
       <div class="container hero-content fade-in">
         <div class="hero-badges">
           <img src="assets/images/badge-google-guaranteed.png" alt="Google Guaranteed" width="80" height="55" loading="lazy">
@@ -140,28 +149,40 @@
         </div>
         <div class="services-grid">
           <article class="service-card fade-up">
-            <img src="assets/images/interior-painting.jpg" alt="Interior residential room freshly painted" width="300" height="200" loading="lazy">
+            <picture>
+              <source srcset="assets/images/interior-painting.webp" type="image/webp">
+              <img src="assets/images/interior-painting.jpg" alt="Interior residential room freshly painted" width="300" height="200" loading="lazy">
+            </picture>
             <div class="service-card-body">
               <h3>Residential Painting</h3>
               <p>Transform your home with interior and exterior painting. We use premium materials and pay close attention to every detail.</p>
             </div>
           </article>
           <article class="service-card fade-up">
-            <img src="assets/images/commercial-painting.jpg" alt="Commercial interior painting project" width="300" height="200" loading="lazy">
+            <picture>
+              <source srcset="assets/images/commercial-painting.webp" type="image/webp">
+              <img src="assets/images/commercial-painting.jpg" alt="Commercial interior painting project" width="300" height="200" loading="lazy">
+            </picture>
             <div class="service-card-body">
               <h3>Commercial Painting</h3>
               <p>Professional painting for offices, retail spaces, and commercial properties — done on your schedule with minimal disruption.</p>
             </div>
           </article>
           <article class="service-card fade-up">
-            <img src="assets/images/cabinet-painting.jpg" alt="Freshly painted kitchen cabinets" width="300" height="200" loading="lazy">
+            <picture>
+              <source srcset="assets/images/cabinet-painting.webp" type="image/webp">
+              <img src="assets/images/cabinet-painting.jpg" alt="Freshly painted kitchen cabinets" width="300" height="200" loading="lazy">
+            </picture>
             <div class="service-card-body">
               <h3>Cabinet Painting</h3>
               <p>Refresh your kitchen or bathroom cabinets with a flawless, factory-quality finish — a fraction of the cost of replacement.</p>
             </div>
           </article>
           <article class="service-card fade-up">
-            <img src="assets/images/wood-staining.jpg" alt="Wood staining and finishing work" width="300" height="200" loading="lazy">
+            <picture>
+              <source srcset="assets/images/wood-staining.webp" type="image/webp">
+              <img src="assets/images/wood-staining.jpg" alt="Wood staining and finishing work" width="300" height="200" loading="lazy">
+            </picture>
             <div class="service-card-body">
               <h3>Wood Staining &amp; Restoration</h3>
               <p>Expert staining, finishing, and restoration services for decks, fences, doors, and other wood surfaces.</p>
@@ -192,7 +213,10 @@
     <section class="about" id="about">
       <div class="container about-grid">
         <div class="about-image fade-left">
-          <img src="assets/images/jorge-portrait.jpg" alt="Jorge, owner of Ambiance Painting Inc." width="480" height="480" loading="lazy">
+          <picture>
+            <source srcset="assets/images/jorge-portrait.webp" type="image/webp">
+            <img src="assets/images/jorge-portrait.jpg" alt="Jorge, owner of Ambiance Painting Inc." width="480" height="480" loading="lazy">
+          </picture>
         </div>
         <div class="about-content fade-right">
           <h2>Family-Owned. Locally Operated. Committed to Excellence.</h2>
@@ -308,7 +332,10 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <img src="assets/images/logo.png" alt="Ambiance Painting Inc." width="140" height="47" loading="lazy">
+        <picture>
+          <source srcset="assets/images/logo.webp" type="image/webp">
+          <img src="assets/images/logo-compressed.png" alt="Ambiance Painting Inc." width="140" height="47" loading="lazy">
+        </picture>
         <p>Family-owned painting contractors serving Orange County, CA.</p>
       </div>
       <div class="footer-links">
@@ -331,7 +358,7 @@
     </div>
     <div class="footer-bottom">
       <div class="container">
-        <p>&copy; 2025 Ambiance Painting Inc. All rights reserved.</p>
+        <p>&copy; 2026 Ambiance Painting Inc. All rights reserved.</p>
         <div class="footer-social">
           <a href="https://www.facebook.com/ambiancepaintingca" target="_blank" rel="noopener noreferrer" aria-label="Facebook">FB</a>
           <a href="https://www.instagram.com/ambiancepaintinginc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
