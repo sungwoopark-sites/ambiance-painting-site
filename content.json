@@ -1,0 +1,60 @@
+{
+  "business_name": "Ambiance Painting Inc.",
+  "phone": "(714) 833-6937",
+  "email": "info@ambiancepaintinginc.com",
+  "address": "Orange, CA 92866",
+  "hours": "Monday–Friday: 9:00 AM – 5:00 PM, Saturday–Sunday: 9:00 AM – 5:00 PM",
+  "services": [
+    "Residential Painting",
+    "Commercial Painting",
+    "Cabinet Painting",
+    "Wood Staining",
+    "Staining Services",
+    "Restoration Services",
+    "Custom Painting Services",
+    "Drywall Services"
+  ],
+  "about_text": "Owner Jorge started the company with one simple goal: to bring beauty, quality, and lasting value to every home and business we touch. Family-owned. Locally operated. Committed to excellence. We emphasize personalized service, high-quality materials, and offer a 100% Satisfaction Guarantee & a 7-Year Warranty.",
+  "owner": "Jorge",
+  "service_areas": ["Laguna Niguel", "Laguna Beach", "San Clemente", "Dana Point", "Huntington Beach", "Orange County, CA"],
+  "testimonials": [],
+  "team_members": [
+    {"name": "Jorge", "role": "Owner"}
+  ],
+  "trust_badges": [
+    "Google Guaranteed",
+    "Licensed & Insured",
+    "Locally Owned & Operated",
+    "Nextdoor Verified",
+    "5-Star Reviews"
+  ],
+  "warranty": "7-Year Warranty",
+  "guarantee": "100% Satisfaction Guarantee",
+  "social_links": {
+    "facebook": "https://www.facebook.com/ambiancepaintingca",
+    "instagram": "https://www.instagram.com/ambiancepaintinginc/"
+  },
+  "brand_colors": {
+    "primary": "#0073e6",
+    "dark": "#005bb5",
+    "dark_gray": "#333333",
+    "light_gray": "#f9f9f9",
+    "white": "#ffffff"
+  },
+  "images_downloaded": [
+    "assets/images/logo.png",
+    "assets/images/interior-painting.jpg",
+    "assets/images/exterior-painting.jpg",
+    "assets/images/cabinet-painting.jpg",
+    "assets/images/wood-staining.jpg",
+    "assets/images/commercial-painting.jpg",
+    "assets/images/jorge-portrait.jpg",
+    "assets/images/family-photo.jpg",
+    "assets/images/badge-licensed.png",
+    "assets/images/badge-locally-owned.png",
+    "assets/images/badge-nextdoor.png",
+    "assets/images/badge-5stars.png",
+    "assets/images/badge-google-guaranteed.png"
+  ],
+  "original_site_url": "https://ambiancepaintinginc.com/"
+}

@@ -1,0 +1,82 @@
+/* ============================================================
+   Ambiance Painting Inc. — Animations
+   ============================================================ */
+
+/* Fade in on load */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.9s ease forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Scroll reveal — fade up */
+.fade-up {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scroll reveal — fade left */
+.fade-left {
+  opacity: 0;
+  transform: translateX(-32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Scroll reveal — fade right */
+.fade-right {
+  opacity: 0;
+  transform: translateX(32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Stagger grid children */
+.services-grid .service-card:nth-child(1) { transition-delay: 0.05s; }
+.services-grid .service-card:nth-child(2) { transition-delay: 0.12s; }
+.services-grid .service-card:nth-child(3) { transition-delay: 0.19s; }
+.services-grid .service-card:nth-child(4) { transition-delay: 0.26s; }
+.services-grid .service-card:nth-child(5) { transition-delay: 0.33s; }
+.services-grid .service-card:nth-child(6) { transition-delay: 0.40s; }
+
+/* Header scroll shadow */
+.site-header.scrolled {
+  box-shadow: 0 2px 20px rgba(0,0,0,.12);
+}
+
+/* Smooth hover underline for nav */
+.nav-desktop a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: var(--blue);
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+  transform-origin: left;
+}
+.nav-desktop a:not(.nav-cta):hover::after {
+  transform: scaleX(1);
+}
+
+/* Pulse on CTA button */
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0,85,204,.4); }
+  50% { box-shadow: 0 0 0 10px rgba(0,85,204,0); }
+}
+.btn-primary:not(:hover) {
+  animation: pulse 3s ease infinite;
+}
