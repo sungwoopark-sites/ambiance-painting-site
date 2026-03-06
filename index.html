@@ -27,7 +27,8 @@
   <link rel="preload" as="image" href="assets/images/family-photo.webp" type="image/webp">
 
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/animations.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="css/animations.css"></noscript>
 
   <!-- LocalBusiness JSON-LD -->
   <script type="application/ld+json">
@@ -99,7 +100,7 @@
           fetchpriority="high"
         >
       </picture>
-      <div class="container hero-content fade-in">
+      <div class="container hero-content">
         <div class="hero-badges">
           <img src="assets/images/badge-google-guaranteed.png" alt="Google Guaranteed" width="80" height="55" loading="lazy">
           <img src="assets/images/badge-licensed.png" alt="Licensed & Insured" width="55" height="55" loading="lazy">
